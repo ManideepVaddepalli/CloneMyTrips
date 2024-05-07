@@ -11,7 +11,7 @@ import { browserName } from "react-device-detect";
 function Page() {
   console.log(browserName)
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
-    return(<a href="microsoft-edge:https://clone-my-trips.vercel.app/">Navigate To Default Browser</a>)
+    return(<a href="https://clone-my-trips.vercel.app/">Navigate To Default Browser</a>)
   }
   else{
     const [datavar,useDatavar]=useState("")
