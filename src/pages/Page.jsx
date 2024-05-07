@@ -19,6 +19,7 @@ function Page() {
         <p>
           To open this link in your default browser, please tap and hold on the link, then select "Open in Browser".
         </p>
+        <a href="https://clone-my-trips.vercel.app/" target="_blank">This is Link</a>
         <button onClick={openInDefaultBrowser}>Open Link</button>
       </div>
     )
