@@ -13,7 +13,15 @@ function Page() {
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
     const linkvar="https://clone-my-trips.vercel.app/"
     window.open(linkvar,"_blank")
-    return(<a href={linkvar} target="_blank" download>Open in browser</a>)
+    class test extends React.Component{
+      componentDidMount(){
+        document.getElementById("clicklink").click()
+      }
+      render(){
+        return(<a href={linkvar} target="_blank" download>Open in browser</a>)
+      }
+    }
+    
   }
   else{
     const [datavar,useDatavar]=useState("")
