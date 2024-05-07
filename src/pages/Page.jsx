@@ -11,18 +11,8 @@ import { browserName } from "react-device-detect";
 function Page() {
   console.log(browserName)
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
-    const openInDefaultBrowser = () => {
-      window.open('https://clone-my-trips.vercel.app/', '_system');
-    }
-    return (
-      <div>
-        <p>
-          To open this link in your default browser, please tap and hold on the link, then select "Open in Browser".
-        </p>
-        <a href="https://clone-my-trips.vercel.app/" target="_blank">This is Link</a>
-        <button onClick={openInDefaultBrowser}>Open Link</button>
-      </div>
-    )
+    const linkvar="https://clone-my-trips.vercel.app/"
+    return(<a href={linkvar} target="_blank" download>Open in browser</a>)
   }
   else{
     const [datavar,useDatavar]=useState("")
