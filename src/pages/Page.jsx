@@ -4,14 +4,14 @@ import Auth from "./AuthComponent"
 import { useState } from "react";
 import Userinfo from "./Userinfo";
 import { Helmet } from 'react-helmet';
-import { browserName, browserVersion } from "react-device-detect";
+import { browserName } from "react-device-detect";
 
 
 
 function Page() {
   console.log(browserName)
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
-    <a href="https://clone-my-trips.vercel.app/">Navigate To Default Browser</a>
+    return(<a href="https://clone-my-trips.vercel.app/">Navigate To Default Browser</a>)
   }
   else{
     const [datavar,useDatavar]=useState("")
