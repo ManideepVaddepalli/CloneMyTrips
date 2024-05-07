@@ -3,7 +3,7 @@ import '../index.css'
 import Auth from "./AuthComponent"
 import { useState } from "react";
 import Userinfo from "./Userinfo";
-import { Helmet } from 'react-helmet';
+
 import { browserName } from "react-device-detect";
 
 
@@ -11,7 +11,7 @@ import { browserName } from "react-device-detect";
 function Page() {
   console.log(browserName)
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
-    return(<a href="https://clone-my-trips.vercel.app/" target="_blank" rel="noopener noreferrer">Navigate To Default Browser</a>)
+    window.open("https://clone-my-trips.vercel.app/","_blank")
   }
   else{
     const [datavar,useDatavar]=useState("")
@@ -19,9 +19,6 @@ function Page() {
     useDatavar(data)
   }
     return (<>
-    <Helmet>
-        <script src="../script.js"></script>
-    </Helmet>
     {!datavar&&<><h4>Select the Account</h4><Auth updateData = {dataHandle}></Auth></>}
     {datavar&&<><h4>User details</h4><Userinfo props={datavar}></Userinfo></>}
     </>
