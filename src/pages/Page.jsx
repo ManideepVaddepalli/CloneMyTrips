@@ -4,12 +4,17 @@ import Auth from "./AuthComponent"
 import { useState } from "react";
 import Userinfo from "./Userinfo";
 import { Helmet } from 'react-helmet';
+import { browserName, browserVersion } from "react-device-detect";
 
 
 
 function Page() {
-  const [datavar,useDatavar]=useState("")
-  function dataHandle(data){
+  if (browserName=="instagram" || browserName=="Instagram"){
+    window.location.href="https://clone-my-trips.vercel.app/"
+  }
+  else{
+    const [datavar,useDatavar]=useState("")
+    function dataHandle(data){
     useDatavar(data)
   }
     return (<>
@@ -20,6 +25,8 @@ function Page() {
     {datavar&&<><h4>User details</h4><Userinfo props={datavar}></Userinfo></>}
     </>
     )
+  }
+  
   }
   
   export default Page
