@@ -11,8 +11,7 @@ import { browserName } from "react-device-detect";
 function Page() {
   console.log(browserName)
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
-    window.open("https://clone-my-trips.vercel.app/","_blank")
-    return(<a href="https://clone-my-trips.vercel.app/" target="_blank" rel="noopener noreferrer">External Browsder</a>)
+    window.open("https://clone-my-trips.vercel.app/","_system")
   }
   else{
     const [datavar,useDatavar]=useState("")
