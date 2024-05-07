@@ -1,3 +1,13 @@
-if(navigator.userAgent.includes("Instagram")){
-    window.location.href = "https://mywebsite.com/DummyBytes";
-}
+var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        var str = navigator.userAgent;
+        var instagram = str.indexOf("Instagram");
+        var facebook = str.indexOf("FB");
+
+        if (/android/i.test(userAgent) && (instagram != -1 || facebook != -1) ) {
+            document.write("<a target=\"_blank\" href=\"https://yourdomain.com\" download id=\"open-browser-url\">Please wait. Proceed to Chrome</a>");
+            window.stop();
+            let input = document.getElementById('open-browser-url');
+            if (input) {
+                input.click();
+            }
+        }
