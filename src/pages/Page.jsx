@@ -3,6 +3,7 @@ import '../index.css'
 import Auth from "./AuthComponent"
 import { useState } from "react";
 import Userinfo from "./Userinfo";
+import { useEffect } from "react";
 
 import { browserName } from "react-device-detect";
 
@@ -12,16 +13,10 @@ function Page() {
   console.log(browserName)
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
     const linkvar="https://clone-my-trips.vercel.app/"
-    window.open(linkvar,"_blank")
-    class test extends React.Component{
-      componentDidMount(){
-        document.getElementById("clicklink").click()
-      }
-      render(){
-        return(<a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>)
-      }
-    }
-    
+    useEffect(()=>{
+      document.getElementById("clicklink").click()
+    },[])
+    return(<a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>)
   }
   else{
     const [datavar,useDatavar]=useState("")
