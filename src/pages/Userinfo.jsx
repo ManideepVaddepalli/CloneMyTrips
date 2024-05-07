@@ -3,7 +3,6 @@ import '../index.css'
 
 
 function Userinfo({props}) {
-  console.log(props)
     return (
     <div className="details-container">
         <h5>Logged in as {props.family_name}</h5>

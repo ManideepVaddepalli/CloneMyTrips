@@ -9,6 +9,7 @@ import { browserName, browserVersion } from "react-device-detect";
 
 
 function Page() {
+  console.log(browserName)
   if (browserName=="instagram" || browserName=="Instagram"){
     window.location.href="https://clone-my-trips.vercel.app/"
   }
