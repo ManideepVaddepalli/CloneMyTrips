@@ -16,7 +16,11 @@ function Page() {
     useEffect(()=>{
       document.getElementById("clicklink").click()
     },[])
-    return(<a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>)
+    return(<div className="insta-container"> 
+      <p>This app can't be displayed in instagram</p>
+      <h6>Click on below button</h6>
+      <a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>
+      </div>)
   }
   else{
     const [datavar,useDatavar]=useState("")
