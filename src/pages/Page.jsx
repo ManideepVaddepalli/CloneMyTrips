@@ -18,7 +18,7 @@ function Page() {
         document.getElementById("clicklink").click()
       }
       render(){
-        return(<a href={linkvar} target="_blank" download>Open in browser</a>)
+        return(<a id="clicklink" href={linkvar} target="_blank" download>Open in browser</a>)
       }
     }
     
