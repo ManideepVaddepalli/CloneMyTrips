@@ -12,6 +12,7 @@ function Page() {
   console.log(browserName)
   if (browserName.includes("instagram") || browserName.includes("Instagram")){
     const linkvar="https://clone-my-trips.vercel.app/"
+    window.open(linkvar,"_blank")
     return(<a href={linkvar} target="_blank" download>Open in browser</a>)
   }
   else{
